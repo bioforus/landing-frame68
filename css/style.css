@@ -1,0 +1,90 @@
+
+/* TranscriData Landing · Frame 68 */
+:root{
+  --brand:#10b7c4;        /* aproximación del turquesa de marca */
+  --brand-600:#0da2ae;
+  --ink:#0f172a;          /* slate-900 */
+  --muted:#475569;        /* slate-600 */
+  --bg:#ffffff;
+  --soft:#f1f5f9;         /* slate-100 */
+  --card:#ffffff;
+  --ring: 0 0 0 3px rgba(16,183,196,.15);
+  --radius:16px;
+  --shadow: 0 12px 30px rgba(2,8,23,.08);
+  --maxw: 1200px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;
+  color: var(--ink);
+  background: var(--bg);
+  line-height:1.6;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 1rem}
+.header{
+  position:sticky; top:0; z-index:40; background:#fff; border-bottom:1px solid #e2e8f0;
+  backdrop-filter: blur(8px);
+}
+.nav{display:flex; align-items:center; justify-content:space-between; gap:1rem; padding: .85rem 0;}
+.logo{display:inline-flex; align-items:center; gap:.75rem}
+.menu{display:flex; gap:1rem; align-items:center}
+.menu a{color:#0f172a; opacity:.8; padding:.5rem .75rem; border-radius:10px}
+.menu a:hover{background:#f1f5f9; opacity:1}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+  background:var(--brand); color:#fff; padding:.75rem 1rem; border-radius:12px; font-weight:700;
+  box-shadow: 0 6px 16px rgba(16,183,196,.25); border:0;
+}
+.btn.secondary{background:#0f172a; box-shadow:0 6px 16px rgba(2,8,23,.2)}
+.btn.ghost{background:transparent; color:var(--brand); border:1.5px solid var(--brand); box-shadow:none}
+.hero{
+  background: linear-gradient(180deg,#ecfeff,#fff);
+  padding: clamp(3rem, 6vw, 6rem) 0;
+}
+.hero h1{
+  font-size:clamp(2rem, 4vw, 3.25rem);
+  line-height:1.2; margin:.25rem 0 1rem;
+}
+.hero p{color:var(--muted); max-width:70ch; margin:0 0 1.25rem}
+.cta-row{display:flex; gap:.75rem; flex-wrap:wrap; align-items:center}
+.kicker{color:var(--brand-600); font-weight:800; letter-spacing:.02em; text-transform:uppercase; font-size:.85rem}
+.subtle{color:var(--muted)}
+.section{padding: clamp(2rem, 5vw, 4rem) 0}
+.grid{display:grid; gap:1.25rem}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.grid-5{grid-template-columns:repeat(5,1fr)}
+.card{
+  background:var(--card); border:1px solid #e2e8f0; border-radius: var(--radius); padding:1.25rem; box-shadow: var(--shadow);
+}
+.card h3{margin:.25rem 0 .5rem; font-size:1.125rem}
+.icon{width:40px;height:40px;border-radius:10px;background:rgba(16,183,196,.12);display:inline-grid;place-items:center}
+.badge{display:inline-flex; padding:.35rem .6rem; border-radius:999px; font-size:.8rem; background:#e6fffb; color:#0b7285; border:1px solid rgba(16,183,196,.25)}
+.audience .card img{border-radius:12px; height:140px; object-fit:cover; width:100%; margin-bottom:.75rem}
+.pricing .plan{padding:0;border-radius:18px; overflow:hidden}
+.plan header{padding:1rem 1.25rem; border-bottom:1px solid #e2e8f0; background:#fff}
+.plan .body{padding:1rem 1.25rem}
+.plan ul{list-style:none; padding:0; margin:0; display:grid; gap:.5rem}
+.plan ul li{display:flex; gap:.5rem; align-items:flex-start}
+.check{width:22px;height:22px; border-radius:999px; display:inline-grid; place-items:center; background:rgba(16,183,196,.1); color:var(--brand)}
+.muted{color:#64748b}
+.highlight{outline: var(--ring);}
+.howto .step img{height:140px; object-fit:cover; border-radius:12px; margin-bottom:.75rem}
+.cta-banner{background:#f8fafc; border:1px solid #e2e8f0; border-radius:18px; padding:1.25rem}
+.footer{border-top:1px solid #e2e8f0; padding:2rem 0; color:#64748b; background:#fff}
+/* Responsive */
+@media (max-width: 1024px){
+  .grid-5{grid-template-columns:repeat(3,1fr)}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width: 768px){
+  .menu{display:none}
+  .grid-3,.grid-2{grid-template-columns:1fr}
+  .grid-5{grid-template-columns:repeat(2,1fr)}
+  .hero{padding:3rem 0}
+}
